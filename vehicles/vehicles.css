@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body{
+    background-color: black;
+}
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+.content{
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.info{
+    color: aliceblue;
+    width:100%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1, p{
+    font-family: Ubuntu;
+}
+
+p{
+    font-weight: 300;
+}
+
+.heading{
+    color: #909090;
+    margin: 0 20vw;
+    font-size: large;
+}
+
+.description{
+    width: 70%;
+    /* background-color: bisque; */
+
+    padding: 0 5%;
+    font-weight: lighter;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.label div:hover{
+    color: gray;
+}
+
+@media (min-width:313px){
+    .header{
+        position: relative;
+        width: 100vw;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .words{
+        display: none;
+        margin-top: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+    }
+    
+    .hamburger {
+        display: inline-block;
+        
+        position: absolute;
+        right: 25px;
+        top: 9px;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 8px) rotate(-45deg);
+    }
+      
+    .change .bar2 {opacity: 0;}
+      
+    .change .bar3 {
+        transform: translate(0, -10px) rotate(45deg);
+    }
+
+    .words.active{
+        display: flex;
+    }
+
+    .header.active{
+        background-color: black;
+        position: fixed;
+        width: 103vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        animation: slidein 0.5s ease-in;
+    }
+
+    @keyframes slidein{
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+    .navbar a{
+        text-decoration: none;
+        font-family: Ubuntu;
+        font-size: medium;
+        color: aliceblue;
+    }
+    
+    .navbar a:hover{
+        font-style: italic;
+        text-shadow: 2px 8px #505050;
+    }
+
+    .logo{
+        width: 120px;
+        position: absolute;
+        left: 30%;
+        top: 0;
+
+    
+    }
+
+    .footer_box{
+        background-color: black;
+        width:100%;
+        height:280px;
+    }
+    
+    .footer{
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        bottom:10px;
+        color:aliceblue;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+    }
+    
+    .footer div{
+        margin-bottom: 15px;
+    }
+    
+    .footer-logo{
+        width: 120px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    .copyrights{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: small;
+    }
+    
+    .label{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size:x-small;
+        font-weight: 700;
+    }
+    
+    .label div{
+        margin-left:auto;
+        width:100%;
+        margin-right: auto;
+    }
+
+    .info{
+        margin-top: 150px;
+    }
+
+    .text{
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: medium;
+        font-family: Ubuntu;
+    }
+
+    .text p{
+        font-size: small;
+    }
+
+    .vehicle1, .vehicle2, .vehicle3{
+        /* background-color: aqua; */
+        width: 80vw;
+        height: 50%;
+    
+        margin: 10% 0;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vehicle2{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items:center;
+
+        text-align: right;
+    }
+
+    .image img{
+        max-width: 100%;
+    }
+    
+    .image{
+        background-image: radial-gradient(rgb(255, 255, 255,1), rgb(255,255,255,0.7), rgb(00,00,00), rgb(00,00,00));
+        width: 70%;
+    
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .description{
+        font-size: small;
+    }
+}
+
+@media (min-width:768px){
+
+    .header{
+        position: fixed;
+        width: 100vw;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .words{
+        display: block;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .navbar div{
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        font-family: Ubuntu;
+        font-size: medium;
+        color: aliceblue;
+    }
+    
+    .navbar a:hover{
+        font-style: italic;
+        text-shadow: 2px 8px #505050;
+    }
+
+    .logo{
+        position: static;
+        width: 120px;
+    
+    }
+    .footer_box{
+        background-color: black;
+        width:100%;
+        height:80px;
+    }
+    
+    .footer{
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+        left: 2%;
+        bottom:10px;
+        color:aliceblue;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width:95%;
+    }
+    
+    .footer div{
+        margin: 0 auto;
+    }
+    
+    .footer-logo{
+        width: 120px;
+    }
+    
+    .copyrights{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: small;
+    }
+    
+    .label{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size:x-small;
+        font-weight: 700;
+    }
+    
+    .label div{
+        margin-left:auto;
+        width:100%;
+        margin-right: auto;
+    }
+
+    .info{
+        margin-top: 200px;
+    }
+
+    .text{
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: xx-large;
+        font-family: Ubuntu;
+    }
+
+    .text p{
+        font-size: large;
+    }
+
+    .vehicle1, .vehicle2, .vehicle3{
+        /* background-color: aqua; */
+        width: 80vw;
+        height: 50%;
+    
+        margin: 10% 0;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .vehicle2{
+        text-align: left;
+    }
+
+    .image img{
+        max-width: 100%;
+    }
+    
+    .image{
+        background-image: radial-gradient(rgb(255, 255, 255,1), rgb(255,255,255,0.7), rgb(00,00,00), rgb(00,00,00));
+        width: 30%;
+    
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .description{
+        font-size: medium;
+    }
+
+}
+
+@media (min-width:1280px){
+    .info-bottom div{
+        margin: 0 8%;
+    }
+
+    
+    .info-bottom span{
+        font-size: x-large;
+    }
+
+    .footer_box{
+        background-color: black;
+        width:100%;
+        height:80px;
+    }
+    
+    .footer{
+        display: flex;
+        position:absolute;
+        left: 5%;
+        bottom:10px;
+        color:aliceblue;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width:80%;
+    }
+    
+    .footer div{
+        margin-left:auto;
+        margin-right: auto;
+    }
+    
+    .footer-logo{
+        width: 120px;
+    }
+    
+    .copyrights{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: small;
+    }
+    
+    .label{
+        width: 60%;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size:x-small;
+        font-weight: 700;
+    }
+    
+    .label div{
+        margin-left:auto;
+        width:100%;
+        margin-right: auto;
+    }
+}

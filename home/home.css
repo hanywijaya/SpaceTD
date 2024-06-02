@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+body{
+    background-color: black;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.content{
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+
+.banner{
+    width:103vw;
+    height: 100vh;
+
+    background-image: url("images/home-rocket(1).png");
+    background-size:cover;
+    background-position-x: center;
+    background-color: rgb(124, 122, 122);
+    background-blend-mode: multiply;
+    animation: change 15s infinite ease-in-out;
+
+    color: aliceblue;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes change{
+    0%{
+        background-image: url('images/home-rocket(1).png');
+    }
+    20%{
+        background-image: url('images/home-rocket(2).jpg');
+    }
+    40%{
+        background-image: url('images/home-rocket(8).jpg');
+    }
+    60%{
+        background-image: url('images/home-rocket(4).jpg');
+    }
+    80%{
+        background-image: url('images/home-rocket(5).jpg');
+    }
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.center h1{
+    font-family: Ubuntu;
+    font-size: 500%;
+    text-shadow: 2px 2px #000000;
+    margin-bottom: 10px;
+}
+
+.center p{
+    font-family: Ubuntu;
+    text-shadow: 1px 1px #000000;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+
+    height: 930px;
+}
+
+.info-top{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-top h1{
+    font-family: Ubuntu;
+    color: aliceblue;
+    font-size: xx-large;
+}
+
+.info-top p{
+    font-family:Ubuntu;
+    font-size: medium;
+    font-weight: 300;
+    color: rgb(92, 92, 92);
+    margin-top: 0;
+}
+
+.info-bottom{
+    color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+}
+
+.launch_number, .landing_number, .reflight_number{
+    text-align: center;
+    line-height: 60px;
+}
+
+.info-bottom span{
+    font-size: x-large;
+    color: #505050;
+}
+
+
+.info-bottom div{
+    font-family: Ubuntu;
+    font-size: 8vw;
+}
+
+hr{
+    width: 50%;
+    margin-bottom: 130px;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+
+.launch_video{
+    margin: 0 10% 100px;
+    width: 80%;
+    height: 80%;
+
+}
+
+
+.label div:hover{
+    color: gray;
+}
+
+
+
+@media (min-width:313px){
+    
+    .header{
+        position: relative;
+        width: 100vw;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .words{
+        display: none;
+        margin-top: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+    }
+    
+    .hamburger {
+        display: inline-block;
+        
+        position: absolute;
+        right: 25px;
+        top: 9px;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 8px) rotate(-45deg);
+    }
+      
+    .change .bar2 {opacity: 0;}
+      
+    .change .bar3 {
+        transform: translate(0, -10px) rotate(45deg);
+    }
+
+    .words.active{
+        display: flex;
+    }
+
+    .header.active{
+        background-color: black;
+        position: fixed;
+        width: 103vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        animation: slidein 0.5s ease-in;
+    }
+
+    @keyframes slidein{
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+    .navbar a{
+        text-decoration: none;
+        font-family: Ubuntu;
+        font-size: medium;
+        color: aliceblue;
+    }
+    
+    .navbar a:hover{
+        font-style: italic;
+        text-shadow: 2px 8px #505050;
+    }
+
+    .logo{
+        width: 120px;
+        position: absolute;
+        left: 30%;
+        top: 0;
+
+    
+    }
+
+    .banner h1{
+        font-size: 200%;
+    }
+    .banner p{
+        font-size: small;
+    }
+
+    .center{
+        width:90%
+    }
+
+
+    .content p{
+        width: 100%;
+        font-size: small;
+    }
+
+    .info-bottom p{
+        font-size: x-large;
+    }
+
+    .info-bottom span{
+        font-size: medium;
+    }
+
+    .info-bottom div{
+        margin: 0 2%;
+    }
+
+    .info-top{
+        margin: 150px 50px 50px;
+    }
+
+    .video h1{
+        margin-left: 10vw;
+        font-family: Ubuntu;
+        font-size: 200%;
+        margin-bottom: 50px;
+        color: aliceblue;
+    }
+
+    .footer_box{
+        background-color: black;
+        width:100%;
+        height:280px;
+    }
+    
+    .footer{
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        bottom:10px;
+        color:aliceblue;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+    }
+    
+    .footer div{
+        margin-bottom: 15px;
+    }
+    
+    .footer-logo{
+        width: 120px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    .copyrights{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: small;
+    }
+    
+    .label{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size:x-small;
+        font-weight: 700;
+    }
+    
+    .label div{
+        margin-left:auto;
+        width:100%;
+        margin-right: auto;
+    }
+}
+
+
+
+@media (min-width:768px){
+
+    .header{
+        position: fixed;
+        width: 100vw;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .words{
+        display: block;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .navbar div{
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        font-family: Ubuntu;
+        font-size: medium;
+        color: aliceblue;
+    }
+    
+    .navbar a:hover{
+        font-style: italic;
+        text-shadow: 2px 8px #505050;
+    }
+
+    .logo{
+        position: static;
+        margin-left: auto;
+        width: 120px;
+    
+    }
+
+    .banner h1{
+        font-size: 80px;
+    }
+    .banner p{
+        font-size: medium;
+    }
+
+    .content p{
+        font-size: large;
+    }
+
+    .center{
+        width: 70%;
+    }
+
+    .info-top{
+        margin: 250px 100px 50px;
+    }
+
+    .info-bottom{
+        margin: 0 3%;
+        margin-top: 80px;
+    }
+
+    .info-bottom p{
+        font-size: 90%;
+    }
+
+    .info-bottom div{
+        margin: 0 5%;
+    }
+    .info-bottom span{
+        font-size: large;
+    }
+
+    .video h1{
+        margin-left: 5vw;
+        font-family: Ubuntu;
+        font-size: 300%;
+        margin-bottom: 50px;
+        color: aliceblue;
+    }
+
+    .footer_box{
+        background-color: black;
+        width:100%;
+        height:80px;
+    }
+    
+    .footer{
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+        left: 2%;
+        bottom:10px;
+        color:aliceblue;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width:95%;
+    }
+    
+    .footer div{
+        margin: 0 auto;
+    }
+    
+    .footer-logo{
+        width: 120px;
+    }
+    
+    .copyrights{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: small;
+    }
+    
+    .label{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size:x-small;
+        font-weight: 700;
+    }
+    
+    .label div{
+        margin-left:auto;
+        width:100%;
+        margin-right: auto;
+    }
+}
+
+
+
+@media (min-width:1280px){
+    .info-bottom div{
+        margin: 0 8%;
+    }
+
+    
+    .info-bottom span{
+        font-size: x-large;
+    }
+
+    .footer_box{
+        background-color: black;
+        width:100%;
+        height:80px;
+    }
+    
+    .footer{
+        display: flex;
+        position:absolute;
+        left: 5%;
+        bottom:10px;
+        color:aliceblue;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width:80%;
+    }
+    
+    .footer div{
+        margin-left:auto;
+        margin-right: auto;
+    }
+    
+    .footer-logo{
+        width: 120px;
+    }
+    
+    .copyrights{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: small;
+    }
+    
+    .label{
+        width: 60%;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size:x-small;
+        font-weight: 700;
+    }
+    
+    .label div{
+        margin-left:auto;
+        width:100%;
+        margin-right: auto;
+    }
+}
+

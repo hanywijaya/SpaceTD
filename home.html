@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home/home.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="content">
+        <div class="banner">
+            <div class="center">
+                <h1>Journeys beyond earth.</h1>
+                <p>In SpaceTD, we create reusable launch vehicles that drastically reduce
+                    space transportation costs, making space accessible to all. Through
+                    our pioneering efforts, we aim to contribute to the realization of a 
+                    sustainable and interplanetary civilization, inspiring generations to 
+                    reach for the stars.</p>
+            </div>
+        </div>
+        <div class="info">
+            <div class="info-top">
+                <h1>Vision</h1>
+                <p>"SpaceTD envisions a future where humanity explores and colonizes
+                    Mars, pushing the boundaries of space exploration. We strive to be at
+                    the forefront of innovation, revolutionizing the aerospace industry
+                    by designing and manufacturing advanced rockets and spacecraft."</p>
+            </div>
+            <div class="info-bottom">
+                <div class="launch_number">
+                    <p>237<br><span>TOTAL LAUNCHES</span></p>
+                </div>
+                <div class="landing_number">
+                    <p>198<br><span>TOTAL LANDINGS</span></p>
+                </div>
+                <div class="reflight_number">
+                    <p>171<br><span>TOTAL REFLIGHTS</span></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="video">
+            <h1>Latest Rocket Launch Documentary</h1>
+            <iframe class="launch_video" src="https://www.youtube.com/embed/Umx-gjHAXsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="footer_box">
+            <div class="footer">
+                <div><img class="footer-logo" src="spacetd_logo.png" alt=""></div>
+                <div class="label">
+                    <div>twitter</div>
+                    <div>instagram</div>
+                    <div>youtube</div>
+                    <div>linkedin</div>
+                    <div>privacy policy</div>
+                </div>
+                
+                <div class="copyrights">SpaceTD©2023</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="navbar">
+
+            <div class="words">
+                <a href="launches.html">launches</a>
+            </div>
+
+            <div class="words">
+                <a href="programs.html">programs</a>
+            </div>
+
+            <div><a href="home.html"><img class="logo" src="spacetd_logo.png"></a></div>
+            
+            <div class="hamburger" onclick="change(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <div class="words">
+                <a href="vehicles.html">vehicles</a>
+            </div>
+
+            <div class="words">
+                <a href="register.html">register</a>
+            </div>
+
+        </div>
+
+        <script>
+            function change(x){
+                x.classList.toggle("change");
+
+                const words = document.getElementsByClassName('words')
+                
+                words[0].classList.toggle("active")
+                words[1].classList.toggle("active")
+                words[2].classList.toggle("active")
+                words[3].classList.toggle("active")
+
+                const header = document.getElementsByClassName('header')[0]
+                header.classList.toggle("active")
+            }
+        </script>
+    </div>
+
+
+    
+</body>
+</html>

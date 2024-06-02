@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vehicles/vehicles.css">
+    <title>Vehicles Page</title>
+</head>
+<body>
+    <div class="content">
+        <div class="info">
+            <div class="text">
+                <h1>Our Space Vehicles</h1>
+                <p class="heading">From sleek, aerodynamic shuttles to colossal interstellar crafts, our fleet encompasses a range of vehicles tailored for diverse missions. Equipped with advanced propulsion systems, life support capabilities, and sophisticated navigation instruments, our space vehicles ensure the safety and efficiency of our astronauts as they venture into the vast unknown. </p>
+            </div>
+            
+            <div class="vehicle1">
+                <div class="image">
+                    <img src="vehicles/images/pic_dragon.png" alt="">
+                </div>
+                <div class="description">
+                    <h1>Dragon</h1>
+                    <p>Height: 8.1m / 26.7ft</p>
+                    <p>Diameter: 4m / 13ft</p>
+                    <p>Mass: 313,105kg / 690,278lb</p>
+                    <p>Best-suited program: Fly Me To The Moon</p>
+                </div>
+            </div>
+            <div class="vehicle2">
+                <div class="description">
+                    <h1>Falcon 1</h1>
+                    <p>Height: 70m / 229.6ft</p>
+                    <p>Diameter: 3.7m / 12ft</p>
+                    <p>Mass: 549,054kg / 1,207,920lb</p>
+                    <p>Best-suited program: An Escape To Mars</p>
+                </div>
+                <div class="image">
+                    <img src="vehicles/images/pic_falcon1.png" alt="">
+                </div>
+            </div>
+            <div class="vehicle3">
+                <div class="image">
+                    <img src="vehicles/images/pic_falcon2.png" alt="">
+                </div>
+                <div class="description">
+                    <h1>Falcon 2</h1>
+                    <p>Height: 120m / 394ft</p>
+                    <p>Diameter: 9m / 29.5ft</p>
+                    <p>Mass: 1,310,109kg / 2,888,296lb</p>
+                    <p>Best-suited program: 'Round The Earth</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_box">
+            <div class="footer">
+                <div><img class="footer-logo" src="spacetd_logo.png" alt=""></div>
+                <div class="label">
+                    <div>twitter</div>
+                    <div>instagram</div>
+                    <div>youtube</div>
+                    <div>linkedin</div>
+                    <div>privacy policy</div>
+                </div>
+                
+                <div class="copyrights">SpaceTD©2023</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="navbar">
+
+            <div class="words">
+                <a href="launches.html">launches</a>
+            </div>
+
+            <div class="words">
+                <a href="programs.html">programs</a>
+            </div>
+
+            <div><a href="home.html"><img class="logo" src="spacetd_logo.png"></a></div>
+            
+            <div class="hamburger" onclick="change(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <div class="words">
+                <a href="vehicles.html">vehicles</a>
+            </div>
+
+            <div class="words">
+                <a href="register.html">register</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function change(x){
+            x.classList.toggle("change");
+
+            const words = document.getElementsByClassName('words')
+            
+            words[0].classList.toggle("active")
+            words[1].classList.toggle("active")
+            words[2].classList.toggle("active")
+            words[3].classList.toggle("active")
+
+            const header = document.getElementsByClassName('header')[0]
+            header.classList.toggle("active")
+        }
+    </script>
+    
+</body>
+</html>
